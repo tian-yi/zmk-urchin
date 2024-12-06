@@ -40,6 +40,14 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+			rpi: require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+	};
 	};
 
 	macros {
@@ -89,10 +97,11 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp V &kp W &kp G &kp M &kp X           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
-			&kp S &kp N &kp T &kp H &kp K           &kp Z &kp A  &kp E     &kp I &kp C
-			&kp P &kp F &kp D &kp L &kp J           &kp Q &kp U  &kp O     &kp Y   &kp B
-							&kp R  &kp SPACE                &kp BSPC  &kp SPACE
+
+			&kp V &kp W &kp G &kp M &kp J           &kp MINUS &kp PERIOD &kp EQUAL &kp SQT &kp SLASH
+      &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K   &kp COMMA  &rpi RIGHT_ALT A  &rpi LCTRL E  &rpi RSHIFT I  &rpi LGUI C
+&kp P       &kp F         &kp D        &kp L           &kp X       &kp SEMICOLON  &kp U            &kp O        &kp Y           &kp B
+							&kp R  &kp TAB                &kp BSPC  &kp SPACE
 			>;
 		};
 
