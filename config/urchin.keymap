@@ -73,13 +73,13 @@
 		// L X
 		 combo_esc {
             timeout-ms = <50>;
-            key-positions = <23 24>;
+            key-positions = <22 23>;
             bindings = <&kp ESC>;
         };
 				// ;u
 						 combo_enter {
             timeout-ms = <50>;
-            key-positions = <25 26>;
+            key-positions = <26 27>;
             bindings = <&kp ENTER>;
         };
 		// both left thumb keys
@@ -105,10 +105,10 @@
 			label = "Base";
 			bindings = <
 
-			&kp V &kp W &kp G &kp M &kp J           &kp MINUS &kp PERIOD &kp EQUAL &kp SQT &kp SLASH
-      &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K   &kp COMMA  &rpi RIGHT_ALT A  &rpi LCTRL E  &rpi RSHIFT I  &rpi LGUI C
-&kp P       &kp F         &kp D        &kp L           &kp X       &kp SEMICOLON  &kp U            &kp O        &kp Y           &kp B
-							&kp R  &kp TAB                &kp BSPC  &kp SPACE
+			&kp V        &kp W          &kp G         &kp M            &kp J		&kp MINUS      &kp PERIOD        &kp EQUAL     &kp SQT        &kp SLASH
+      &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp COMMA      &rpi RIGHT_ALT A  &rpi LCTRL E  &rpi RSHIFT I  &rpi LGUI C
+      &kp P        &kp F          &kp D         &kp L            &kp X    &kp SEMICOLON  &kp U             &kp O         &kp Y          &kp B
+									 		 																	&kp R  &kp TAB    &kp BSPC  &kp SPACE
 			>;
 		};
 
