@@ -109,7 +109,7 @@
 			&kp V        &kp W          &kp G         &kp M            &kp J		&kp SEMICOLON  &kp COMMA         &kp PERIOD    &kp MINUS      &kp EQUAL
       &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp SQT        &rpi RIGHT_ALT A  &rpi RCTRL E  &rpi RSHIFT I  &rpi LGUI C
       &kp P        &kp F          &kp D         &kp L            &kp X    &kp SLASH      &kp U             &kp O         &kp Y          &kp B
-									 		 														  &kp R  &lt Sym TAB    &lt Sym BSPC  &kp SPACE
+									 		 														  &kp R  &lt 1 TAB    &lt 1 BSPC  &kp SPACE
 			>;
 		};
 
@@ -120,7 +120,7 @@
       &kp EXCL  &kp AT    &kp HASH  &kp LBRC &kp RBRC    &STAR    &kp N7 &kp N8 &kp N9 &CAPS
       &kp CARET &kp TILDE &kp GRAVE &kp LBKT &kp RBKT    &PERCENT &kp N4 &kp N5 &kp N6 &caps_word
       &kp BSLH  &kp PIPE  &kp AMPS  &kp LPAR &kp RPAR    &kp N0   &kp N1 &kp N2 &kp N3 &trans
-                                       &trans  &trans    &trans &trans
+                                       &trans  &trans       &trans &trans
 			>;
 		};
 
