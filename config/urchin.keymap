@@ -70,31 +70,33 @@
 			key-positions = <31 33>;
 			bindings = <&mo SYM2>;
 		};
-		// L X
+		// DL
 		 combo_esc {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp ESC>;
         };
-				// ;u
-						 combo_enter {
+		// UO
+		 combo_enter {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp ENTER>;
+        };
+		 combo_q {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp Q>;
+        };
+		 combo_z {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp Z>;
         };
 		// both left thumb keys
 		combo_settings {
 			timeout-ms = <200>;
 			key-positions = <30 31>;
 			bindings = <&mo SETTINGS>;
-		};
-		// left index & middle fingers (home-row)
-		// hold control & space for Adobe workflow
-		combo_ctrl_space {
-			timeout-ms = <200>;
-			key-positions = <12 13>;
-			bindings = <&kp LC(SPACE)>;
-			layers = <BASE>;
 		};
 	};
 
@@ -104,10 +106,9 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-
-			&kp V        &kp W          &kp G         &kp M            &kp J		&kp MINUS      &kp PERIOD        &kp EQUAL     &kp SQT        &kp SLASH
-      &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp COMMA      &rpi RIGHT_ALT A  &rpi LCTRL E  &rpi RSHIFT I  &rpi LGUI C
-      &kp P        &kp F          &kp D         &kp L            &kp X    &kp SEMICOLON  &kp U             &kp O         &kp Y          &kp B
+			&kp V        &kp W          &kp G         &kp M            &kp J		&kp SEMICOLON  &kp COMMA         &kp PERIOD    &kp MINUS      &kp EQUAL
+      &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp SQT        &rpi RIGHT_ALT A  &rpi RCTRL E  &rpi RSHIFT I  &rpi LGUI C
+      &kp P        &kp F          &kp D         &kp L            &kp X    &kp SLASH      &kp U             &kp O         &kp Y          &kp B
 									 		 																	&kp R  &kp TAB    &kp BSPC  &kp SPACE
 			>;
 		};
