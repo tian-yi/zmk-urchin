@@ -109,18 +109,18 @@
 			&kp V        &kp W          &kp G         &kp M            &kp J		&kp SEMICOLON  &kp COMMA         &kp PERIOD    &kp MINUS      &kp EQUAL
       &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp SQT        &rpi RIGHT_ALT A  &rpi RCTRL E  &rpi RSHIFT I  &rpi LGUI C
       &kp P        &kp F          &kp D         &kp L            &kp X    &kp SLASH      &kp U             &kp O         &kp Y          &kp B
-									 		 																	&kp R  &kp TAB    &kp BSPC  &kp SPACE
+									 		 														  &kp R  &lt Sym TAB    &lt Sym BSPC  &kp SPACE
 			>;
 		};
 
 		// Numbers and high frequency symbols
 		sym_layer {
-			label = "Sym.";
+			label = "Sym";
 			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
-			&kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
-														&mo FNC  &mo SYM2       &trans &trans
+      &kp EXCL  &kp AT    &kp HASH  &kp LBRC &kp RBRC    &STAR    &kp N7 &kp N8 &kp N9 &CAPS
+      &kp CARET &kp TILDE &kp GRAVE &kp LBKT &kp RBKT    &PERCENT &kp N4 &kp N5 &kp N6 &caps_word
+      &kp BSLH  &kp PIPE  &kp AMPS  &kp LPAR &kp RPAR    &kp N0   &kp N1 &kp N2 &kp N3 &trans
+                                       &trans  &trans    &trans &trans
 			>;
 		};
 
