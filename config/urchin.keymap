@@ -109,7 +109,7 @@
 			&kp V        &kp W          &kp G         &kp M            &kp J		&kp SEMICOLON  &kp COMMA         &kp PERIOD    &kp MINUS      &kp EQUAL
       &rpi LGUI S  &rpi LSHIFT N  &rpi LCTRL T  &rpi LEFT_ALT H  &kp K		&kp SQT        &rpi RIGHT_ALT A  &rpi RCTRL E  &rpi RSHIFT I  &rpi LGUI C
       &kp F        &kp P          &kp D         &kp L            &kp X    &kp SLASH      &kp U             &kp O         &kp Y          &kp B
-									 		 														&lt 2 R  &lt 1 SPACE    &lt 1 BSPC  &lt 2 TAB
+									 		 														&lt 2 R  &lt 1 TAB    &lt 1 BSPC  &lt 2 SPACE
 			>;
 		};
 
