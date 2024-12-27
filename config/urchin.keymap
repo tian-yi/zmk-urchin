@@ -59,6 +59,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+
+	qu: qu {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp q &kp u>;
+		};
 	};
 
 	combos {
@@ -90,7 +96,7 @@
 		 combo_qu {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp QU>;
+            bindings = <&qu>;
         };
 		 combo_z {
             timeout-ms = <50>;
