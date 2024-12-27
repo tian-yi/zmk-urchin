@@ -90,7 +90,7 @@
 		 combo_qu {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp Q &kp U>;
+            bindings = <&kp QU>;
         };
 		 combo_z {
             timeout-ms = <50>;
