@@ -61,9 +61,10 @@
 		};
 
 	qu: qu {
+		  label = "qu";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&kp q &kp u>;
+			bindings = <&kp Q &kp U>;
 		};
 	};
 
