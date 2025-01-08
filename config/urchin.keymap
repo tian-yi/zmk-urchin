@@ -71,16 +71,16 @@
 			key-positions = <31 33>;
 			bindings = <&mo SYM2>;
 		};
-		// DL
+		// lx
 		 combo_esc {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
+            timeout-ms = <50>
+            key-positions = <23 24>;
             bindings = <&kp ESC>;
         };
-		// UO
+		// 'u
 		 combo_enter {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <25 26>;
             bindings = <&kp ENTER>;
         };
 		 combo_q {
