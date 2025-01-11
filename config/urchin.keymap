@@ -113,7 +113,7 @@
 			label = "Base";
 			bindings = <
 			&kp V         &kp W  &kp G         &kp M          &kp J    	&kp SEMICOLON  &kp COMMA       &kp PERIOD   &kp MINUS  &kp EQUAL
-      &rpi LCTRL S  &kp H  &rpi LGUI T   &rpi LSHIFT N  &kp K	    &kp SLASH      &rpi RSHIFT A   &rpi LGUI E  &kp I      &rpi RCTR C
+      &rpi LCTRL S  &kp N  &rpi LGUI T   &rpi LSHIFT H  &kp K	    &kp SLASH      &rpi RSHIFT A   &rpi LGUI E  &kp I      &rpi RCTR C
       &kp F         &kp P  &kp D         &lt 2 L        &kp X     &kp SQT        &lt 2 U         &kp O        &kp Y      &kp B
 									 		 							&rpi LEFT_ALT R  &lt 1 TAB    &lt 1 BSPC  &rpi RIGHT_ALT SPACE
 			>;
