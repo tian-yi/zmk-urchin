@@ -60,6 +60,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp Q &kp U>;
 		};
+	psql: psql {
+		  label = "psql";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp P &kp S &kp Q &kp L>;
+		};
 	};
 
 	combos {
@@ -98,7 +104,7 @@
             key-positions = <21 22>;
             bindings = <&kp Z>;
         };
-						 combo_psql {
+		combo_psql {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&psql>;
