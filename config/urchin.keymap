@@ -116,6 +116,12 @@
 			bindings = <&mo SETTINGS>;
 		};
 	};
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;    // Reduced from default 200ms
+    quick-tap-ms = <100>;       // Enable rapid tap sequences
+    require-prior-idle-ms = <50>; // Wait 50ms after last key
+};
 
 	keymap {
 		compatible = "zmk,keymap";
