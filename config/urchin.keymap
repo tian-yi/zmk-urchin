@@ -48,6 +48,16 @@
     require-prior-idle-ms = <100>;
     bindings = <&kp>, <&kp>;
 	};
+	        mmv {
+            acceleration-exponent = <1>;      // 1
+            time-to-max-speed-ms = <300>;    // 40
+            delay-ms = <0>;                   // 0
+        };
+        msc {
+            acceleration-exponent = <0>;      // 0
+            time-to-max-speed-ms = <40>;      // 500
+            delay-ms = <0>;                   // 10
+        };
 	};
 
 	macros {
@@ -129,10 +139,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp V         &kp W  &kp G         &kp M          &kp J    	&kp SEMICOLON  &kp COMMA       &kp PERIOD   &kp MINUS  &kp EQUAL
-      &rpi LCTRL S  &kp N  &rpi LGUI T   &rpi LSHIFT H  &kp K	    &kp SLASH      &rpi RSHIFT A   &rpi RGUI E  &kp I      &rpi RCTRL C
-      &kp F         &kp P  &kp D         &lt 2 L        &kp X     &kp SQT        &lt 2 U         &kp O        &kp Y      &kp B
-									 		 							&mt LEFT_ALT R  &lt 1 BSPC     &lt 1 SPACE  &mt RIGHT_ALT TAB
+			&kp V         &kp W          &kp G        &kp M            &kp J    	&kp SEMICOLON  &kp COMMA          &kp PERIOD   &kp MINUS      &kp EQUAL
+      &rpi LCTRL S  &rpi LSHIFT N  &rpi LGUI T  &rpi LEFT_ALT H  &kp K	    &kp SLASH      &rpi RIGHT_ALT A   &rpi RGUI E  &rpi RSHIFT I  &rpi RCTRL C
+      &kp F         &kp P          &kp D        &kp L            &kp X      &kp SQT        &kp U              &kp O        &kp Y          &kp B
+									 		 						 &lt 2 R      &lt 1 BSPC       &lt 1 SPACE  &lt 2 TAB
 			>;
 		};
 
