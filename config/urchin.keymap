@@ -76,6 +76,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp Q &kp U>;
 		};
+	sp: sp {
+		  label = "sp";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp S &kp P>;
+		};
 	psql: psql {
 		  label = "psql";
 			compatible = "zmk,behavior-macro";
@@ -107,18 +113,23 @@
         };
 		 combo_q {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&kp Q>;
         };
 		 combo_qu {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&qu>;
         };
 		 combo_z {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <20	21>;
             bindings = <&kp Z>;
+        };
+		 combo_sp {
+            timeout-ms = <50>;
+            key-positions = <21	22>;
+            bindings = <&sp>;
         };
 		combo_psql {
             timeout-ms = <50>;
