@@ -107,12 +107,12 @@
         };
 		 combo_q {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&kp Q>;
         };
 		 combo_qu {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             bindings = <&qu>;
         };
 		 combo_z {
@@ -141,7 +141,7 @@
 			bindings = <
 			&kp V         &kp W          &kp G        &kp M            &kp J    	&kp SEMICOLON  &kp COMMA          &kp PERIOD   &kp MINUS      &kp EQUAL
       &rpi LCTRL S  &rpi LSHIFT N  &rpi LGUI T  &rpi LEFT_ALT H  &kp K	    &kp SLASH      &rpi RIGHT_ALT A   &rpi RGUI E  &rpi RSHIFT I  &rpi RCTRL C
-      &kp P         &kp F          &kp D        &kp L            &kp X      &kp SQT        &kp U              &kp O        &kp Y          &kp B
+      &kp Pu         &kp F          &kp D        &kp L            &kp X      &kp SQT        &kp U              &kp O        &kp Y          &kp B
 									 		 						 &lt 2 R      &lt 1 BSPC       &lt 1 TAB  &lt 2 SPACE
 			>;
 		};
