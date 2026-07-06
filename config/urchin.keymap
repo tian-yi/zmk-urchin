@@ -7,11 +7,9 @@
 // Layer definitions
 #define BASE 0
 #define SYM 1
-#define EXT 2
+#define NAV 2
 #define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
+#define SETTINGS 4
 // -----------------
 
 &sk {
@@ -70,71 +68,22 @@
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
 
-	qu: qu {
-		  label = "qu";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp Q &kp U>;
 		};
-	sp: sp {
-		  label = "sp";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp S &kp P>;
-		};
-	psql: psql {
-		  label = "psql";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp P &kp S &kp Q &kp L>;
-		};
-	};
 
 	combos {
 		compatible = "zmk,combos";
 
-		// internal-left & external-right thumb keys
-		combo_sym2 {
+		// inner-left & outer-right thumb keys
+		combo_fnc {
 			timeout-ms = <200>;
 			key-positions = <31 33>;
-			bindings = <&mo SYM2>;
+			bindings = <&mo FNC>;
 		};
-		// lx
+		// q + w
 		 combo_esc {
             timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp ESC>;
-        };
-		// 'u
-		 combo_enter {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&kp ENTER>;
-        };
-		 combo_q {
-            timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp Q>;
-        };
-		 combo_qu {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&qu>;
-        };
-		 combo_z {
-            timeout-ms = <50>;
-            key-positions = <20	21>;
-            bindings = <&kp Z>;
-        };
-		 combo_sp {
-            timeout-ms = <50>;
-            key-positions = <21	22>;
-            bindings = <&sp>;
-        };
-		combo_psql {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&psql>;
+            bindings = <&kp ESC>;
         };
 		// both left thumb keys
 		combo_settings {
@@ -148,12 +97,12 @@
 		compatible = "zmk,keymap";
 		// Base alpha layer
 		default_layer {
-			label = "Base";
+			label = "QWERTY";
 			bindings = <
-			&kp V         &kp W          &kp G        &kp M            &kp J    	&kp SEMICOLON  &kp COMMA          &kp PERIOD   &kp MINUS      &kp EQUAL
-      &rpi LCTRL S  &rpi LSHIFT N  &rpi LGUI T  &rpi LEFT_ALT H  &kp K	    &kp SLASH      &rpi RIGHT_ALT A   &rpi RGUI E  &rpi RSHIFT I  &rpi RCTRL C
-      &kp P         &kp F          &kp D        &kp L            &kp X      &kp SQT        &kp U              &kp O        &kp Y          &kp B
-									 		 						 &lt 2 R      &lt 1 BSPC       &lt 1 TAB  &lt 2 SPACE
+			&kp Q         &kp W          &kp E        &kp R            &kp T    	&kp Y      &kp U              &kp I        &kp O          &kp P
+      &rpi LCTRL A  &rpi LSHIFT S  &rpi LGUI D  &rpi LEFT_ALT F  &kp G	    &kp H      &rpi RIGHT_ALT J   &rpi RGUI K  &rpi RSHIFT L  &rpi RCTRL SEMICOLON
+      &kp Z         &kp X          &kp C        &kp V            &kp B      &kp N      &kp M              &kp COMMA    &kp PERIOD     &kp SLASH
+                                                    &lt NAV TAB  &lt SYM BSPC      &lt SYM ENTER  &lt NAV SPACE
 			>;
 		};
 
@@ -175,7 +124,7 @@
 			&trans &kp C_PREV  &kp C_PP      &kp C_NEXT   &trans    	&kp PG_UP  &kp HOME  &kp UP &kp END &trans
 		  &trans &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP &trans 		    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &trans
 			&trans &trans &kp C_BRI_INC &kp C_BRI_DEC &trans       	&trans &trans &trans &trans &trans
-																		&to 3 &to 4    &kp ENTER  &tog 2
+																		&to FNC &to SETTINGS    &kp ENTER  &tog NAV
 			>;
 		};
 
@@ -186,7 +135,7 @@
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
 			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
 			&none &none &none &none &none				          &none &none &none &none &none
-							  &none &none              &to 0 &to 0
+							  &none &none              &to BASE &to BASE
 			>;
 		};
 
@@ -197,8 +146,8 @@
 				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader
 				&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
 				&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
-										&none &none                         &to 0 &to 0
-				>;
-		};
+										&none &none                         &to BASE &to BASE
+					>;
+			};
 	};
 };
