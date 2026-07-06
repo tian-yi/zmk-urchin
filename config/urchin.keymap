@@ -68,7 +68,25 @@
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
 
+		qu: qu {
+			label = "qu";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp Q &kp U>;
 		};
+		sp: sp {
+			label = "sp";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp S &kp P>;
+		};
+		psql: psql {
+			label = "psql";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp P &kp S &kp Q &kp L>;
+		};
+	};
 
 	combos {
 		compatible = "zmk,combos";
@@ -79,12 +97,43 @@
 			key-positions = <31 33>;
 			bindings = <&mo FNC>;
 		};
-		// q + w
-		 combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
+		// lx
+		combo_esc {
+			timeout-ms = <50>;
+			key-positions = <23 24>;
+			bindings = <&kp ESC>;
+		};
+		// 'u
+		combo_enter {
+			timeout-ms = <50>;
+			key-positions = <25 26>;
+			bindings = <&kp ENTER>;
+		};
+		combo_q {
+			timeout-ms = <50>;
+			key-positions = <0 1>;
+			bindings = <&kp Q>;
+		};
+		combo_qu {
+			timeout-ms = <50>;
+			key-positions = <1 2>;
+			bindings = <&qu>;
+		};
+		combo_z {
+			timeout-ms = <50>;
+			key-positions = <20 21>;
+			bindings = <&kp Z>;
+		};
+		combo_sp {
+			timeout-ms = <50>;
+			key-positions = <21 22>;
+			bindings = <&sp>;
+		};
+		combo_psql {
+			timeout-ms = <50>;
+			key-positions = <22 23>;
+			bindings = <&psql>;
+		};
 		// both left thumb keys
 		combo_settings {
 			timeout-ms = <200>;
@@ -97,12 +146,12 @@
 		compatible = "zmk,keymap";
 		// Base alpha layer
 		default_layer {
-			label = "QWERTY";
+			label = "HandsDown";
 			bindings = <
-			&kp Q         &kp W          &kp E        &kp R            &kp T    	&kp Y      &kp U              &kp I        &kp O          &kp P
-      &rpi LCTRL A  &rpi LSHIFT S  &rpi LGUI D  &rpi LEFT_ALT F  &kp G	    &kp H      &rpi RIGHT_ALT J   &rpi RGUI K  &rpi RSHIFT L  &rpi RCTRL SEMICOLON
-      &kp Z         &kp X          &kp C        &kp V            &kp B      &kp N      &kp M              &kp COMMA    &kp PERIOD     &kp SLASH
-                                                    &lt NAV TAB  &lt SYM SPACE     &lt SYM BSPC   &lt NAV ENTER
+			&kp V         &kp W          &kp G        &kp M            &kp J    	&kp SEMICOLON  &kp COMMA          &kp PERIOD   &kp MINUS      &kp EQUAL
+      &rpi LCTRL S  &rpi LSHIFT N  &rpi LGUI T  &rpi LEFT_ALT H  &kp K	    &kp SLASH      &rpi RIGHT_ALT A   &rpi RGUI E  &rpi RSHIFT I  &rpi RCTRL C
+      &kp P         &kp F          &kp D        &kp L            &kp X      &kp SQT        &kp U              &kp O        &kp Y          &kp B
+                                                    &lt NAV R    &lt SYM BSPC      &lt SYM TAB  &lt NAV SPACE
 			>;
 		};
 
