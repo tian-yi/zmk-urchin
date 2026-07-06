@@ -1,0 +1,119 @@
+/ {
+	macros {
+		// Pressing all modifiers can clear a stuck modifier state.
+		unstick: unstick {
+			label = "ZM_unstick";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+		};
+
+		sudo: sudo {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <10>;
+			tap-ms = <20>;
+			bindings
+				= <&macro_tap &kp S &kp U &kp D &kp O>
+				, <&macro_tap &kp SPACE>
+				, <&macro_tap &kp EXCL &kp EXCL>
+				, <&macro_tap &kp RET>
+				;
+		};
+
+		minus_macro: minus_macro {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp SPACE>
+				, <&macro_tap &kp MINUS>
+				, <&macro_tap &kp SPACE>
+				;
+		};
+
+		equals_macro: equals_macro {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp SPACE>
+				, <&macro_tap &kp EQUAL>
+				, <&macro_tap &kp SPACE>
+				;
+		};
+
+		plus_macro: plus_macro {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp SPACE>
+				, <&macro_tap &kp LS(EQUAL)>
+				, <&macro_tap &kp SPACE>
+				;
+		};
+
+		home_macro: home_macro {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp TILDE>
+				, <&macro_tap &kp FSLH>
+				;
+		};
+
+		ff: ff {
+			label = "ff";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp F &kp F>;
+		};
+
+		qu: qu {
+			label = "qu";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp Q &kp U>;
+		};
+
+		sp: sp {
+			label = "sp";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp S &kp P>;
+		};
+
+		sql: sql {
+			label = "sql";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp S &kp Q &kp L>;
+		};
+
+		mp: mp {
+			label = "mp";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp M &kp P>;
+		};
+
+		lm: lm {
+			label = "lm";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp L>
+				, <&macro_tap &kp M>
+				;
+		};
+
+		llm: llm {
+			label = "llm";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp L>
+				, <&macro_tap &kp L>
+				, <&macro_tap &kp M>
+				;
+		};
+	};
+};
